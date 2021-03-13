@@ -1,0 +1,227 @@
+@import url('../CSS/');
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background-color: #12172b;
+    font-family: "Poppins", sans-serif;
+    font: 14px/21px Monaco, sans-serif;
+    color: rgb(231, 0, 0);
+    text-size-adjust: 100%;
+  }
+  
+  .container {
+    margin: 20px 40px;
+    color: white;
+  }
+   a, a:visited{text-decoration:none;color:#FF805F}
+   h4{margin:0;color:rgb(233, 20, 20);}
+   
+   /* #DC Morph Buttons
+   =======================*/
+   .dc-morph-btns {
+     position: absolute;
+     right: -8%;
+     top: 15%;
+     transform: translateX(-50%) translateY(-50%);
+       width:200px;
+       height: 50px;
+       font-size: 1.7em; 
+       line-height: 0.9rem; 
+       color: rgb(255, 11, 11); 
+       text-align: center;
+   }
+   .dc-morph-btns li {  
+       position: relative;
+       width: 70px;
+       height: 80px;
+       display: inline-block;
+       margin-right: 30px;
+       overflow: visible;
+   
+   }
+   .dc-morph-btns li a {
+       position: absolute;
+       left: 0;
+       top:0;
+       z-index: 1;
+       background: rgb(253, 253, 253);
+       border: 1px solid rgb(0, 0, 0);
+       text-indent:0;
+       display:inline-block;
+       color:rgb(238, 238, 238);
+       font-size:12px;
+       font-weight: 400;
+       text-decoration:none;
+       text-align:center;
+       text-transform: uppercase;
+       width: 70px;
+       height:70px;
+       transition: all 600ms cubic-bezier(0.190,1.000,0.220,1.000);
+       box-sizing: content-box;
+       border-radius: 50px;
+       background-clip: padding-box;
+   }
+   
+   .dc-morph-btns li a:hover {
+       border: 1px solid rgb(2, 2, 31);
+       background-clip: padding-box;
+       border-top-left-radius:40px;
+       border-top-right-radius:2px;
+       border-bottom-left-radius:40px;
+       border-bottom-right-radius:40px;
+       transform: rotate(-45deg);
+   }
+   
+   .dc-morph-btns ul li i {
+       position: absolute;
+       width: 30px;
+       left:50%;
+       top:40%;
+       margin: -13px 0 0 -18px;
+       color: #04c7fd;
+       font-size: 1.4em;
+       z-index: 2;
+       pointer-events: none;
+   }
+   
+   .dc-morph-btns ul li span {
+       position: absolute;
+       width: 80px;
+       bottom: -30px;
+       left:-5px;
+       display: block;
+       color: rgb(207, 29, 29);
+       opacity:0;
+       font-size: 0.7em;
+       text-align: center;
+       transition: all 0.5s;
+   }
+   
+   .dc-morph-btns ul li:hover span {
+       color: rgb(216, 37, 37);
+       opacity:1;
+   }
+   
+   .dc-morph-btns ul li.selected span {
+       color: #FF805F;
+       opacity:1;
+   }
+   
+   .dc-morph-btns ul li.selected:hover span {
+       color: #FF805F;
+       opacity:1;
+   }
+   
+   .dc-morph-btns li.selected a{  
+       border: 1px solid #FF805F;
+       background-clip: padding-box;
+       border-top-left-radius:40px;
+       border-top-right-radius:2px;
+       border-bottom-left-radius:40px;
+       border-bottom-right-radius:40px;
+       transform: rotate(-45deg);
+   }
+   
+   .dc-morph-btns li.selected i{ 
+       color: #FF805F;
+   }
+   
+   @keyframes arrow-spin {
+     50% {
+       transform: rotateY(360deg);
+     }
+   }
+  .heading {
+    margin-bottom: 80px;
+    font-size: 40px;
+    color: rgb(245, 10, 10);
+  }
+  
+  .heading span {
+    font-style: italic;
+    font-size: 30px;
+  }
+  
+  .profiles {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 80px;
+  }
+  
+  .profile {
+    flex-basis: 260px;
+  }
+  
+  .profile .profile-img {
+    height: 260px;
+    width: 260px;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .profile:hover .profile-img {
+    filter: grayscale(0);
+  }
+  
+  .user-name {
+    margin-top: 30px;
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .profile h5 {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: rgb(231, 10, 10);
+  }
+  
+  @media only screen and (max-width: 1150px) {
+    .profiles {
+      flex-direction: column;
+    }
+  
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .profile p {
+      text-align: center;
+      margin: 20px 60px 80px 60px;
+      font-size: 20px;
+    }
+  }
+  
+  @media only screen and (max-width: 900px) {
+    .heading {
+      font-size: 40px;
+      color: white;
+      text-align: center;
+    }
+  
+    .heading span {
+      font-size: 15px;
+    }
+  
+    .profiles {
+      margin: 20px 0;
+    }
+  
+    .profile p {
+      margin: 20px 10px 80px 10px;
+    }
+    .dc-morph-btns{
+      position: absolute;
+      width: 80px;
+    }
+  }
+  
+  
