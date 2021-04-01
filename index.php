@@ -1,19 +1,15 @@
 <!DOCTYPE html>
-<?php 
-require __DIR__.'/include/vendor/autoload.php';
 
-use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Request;
-use GuzzleHttp\Psr7;
-use GuzzleHttp\Exception\RequestException;?>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./CSS/style.css">
   <link rel="stylesheet" href="./CSS/all.css">
+
   <style id="clock-animate"></style>
-  
+  <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
   <title>ICONIC DREAM FOCUS</title>
    <link rel = "icon" href = "./assets/idf2.PNG" 
         type = "image/x-icon"> 
@@ -229,82 +225,103 @@ use GuzzleHttp\Exception\RequestException;?>
 
   <!-- Footer -->
   <section id="footer">
-    <div class="footer container">
-      <div class="social-menu"> 
-        <h4>Follow us on</h4> 
-        <a href="http://facebook.com/IDFiconic" target="blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.instagram.com/ejohnkira/?hl=en" target="blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://twitter.com/IconicIdf" target="blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/idf-iconic-b9bba8208/" target="blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.youtube.com/" target="blank"><i class="fab fa-youtube"></i></a>
-    </div>
-       <p>Copyright ©2021 All rights reserved | made by</p>
-      <div class="logo">
-       <img src="./assets/logo.PNG" alt="logo">
-      </div> 
-      <div class="move-up">
-        <a href="#hero" ><i class="fas fa-arrow-circle-up fa-2x"></i></a>
-      </div>
-      <div class="content">
-       <header>Become a Subscriber. Join Us!!</header>
-     </div>
-          <form action="#footer" method="POST">
-             <?php 
+   
+  <footer class="footer">
+    <div class="container">
+        <div class="about-us" >
+            <h2>Our Vision</h2>
+            <p>"We cook iconic products to connect the world"</p>
+            <h2>Our Mission</h2>
+            <p>"Future Source"</p>
+        </div>
+        <div class="newsletter" >
+            <h2>Newsletter</h2>
+            <p>Stay connected with us!</p>
+            <div class="form">
              
-               $userEmail = ""; 
-
-$client=new Client();
-
-$headers = [ 'authorization' => 'Bearer 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',
-       'content-type'     => 'application/json'];
-$body='';
-$request='';
-if(isset($_POST['subscribe'])){ 
-        $subject = "ICONIC DREAM FOCUS PVT LTD - Thanks for subscribing us";
-        $message = "Thank You for joining your hands with us. You'll always receive updates from us. And we won't share and sell your information.";
-        $body = '{"personalizations":[{"to":[{"email":"'.$_POST['email'].'","name":"ICONIC DREAM FOCUS"}],"subject":"'.$subject.'"}],"content": [{"type": "text/plain", "value":"'.$message.'"}],"from":{"email":"idficonic@gmail.com","name":"Iconic Dream Focus"}}';
-        
-        $request = new Request('POST', 'https://api.sendgrid.com/v3/mail/send', $headers, $body);
-             
-                  
-              try{
-                $promise = $client->send($request);
-             ?>
-                 <!-- show success message once email send successfully -->
-           
-                <div class="alert success-alert">
-                 <?php echo "Thanks for subscribing us. Kindly, check your mail!" ?>
+               <div class="wrapper">
+                <input type="checkbox" id="click">
+                <label class="btn-1" for="click">Subscribe</label>
+                <div class="field">
+                  <input type="text" class="email" id="email" name="email" placeholder="Email Address" required ">
+                  <button type="submit" class="btn-2" name="subscribe">Subscribe</button>
                 </div>
-              <?php
-                    $userEmail = "";
-             }catch (RequestException $e){
-              ?> 
-              <!-- show error message if somehow mail can't be sent -->
-             <div class="alert error-alert">
-               <?php echo "Enter the valid Email Address/Failed while sending your mail. Check your Internet Connection!" ?>
-             </div>
-             <?php
-                 }
-             }
-              ?>
-             <div class="field">
-               <input type="text" class="email" name="email" placeholder="Email Address" required value="<?php echo $userEmail ?>">
-             </div>
-              <div class="field btn">
-                <div class="layer"></div>
-                <button type="submit" name="subscribe">Subscribe</button>
-             </div>
-           </form>
-    <div class="text">We do not share your information.</div>
-  </div>
-    
+              </div>
+</div>
+               
+                    <div class="text">We do not share your information.</div>
+                  
+        </div>
+        <div class="Gallery">
+            <h2>Gallery</h2>
+            <div class="flex-row">
+                <img src="./assets/a.jpg" alt="g1">
+                <img src="./assets/d.jpeg" alt="g2">
+                <img src="./assets/e.jpeg" alt="g3">
+            </div>
+            <div class="flex-row">
+                <img src="./assets/f.jpeg" alt="g4">
+                <img src="./assets/g.jpeg" alt="g5">
+                <img src="./assets/h.jpeg" alt="g6">
+            </div>
+        </div>
+        <div class="follow">
+            <h2>Follow us</h2>
+            <p>Let us be Social</p>
+            <div class="iconsss">
+             <a href="http://facebook.com/IDFiconic" target="blank" style="color:rgb(49, 55, 146);margin-right:10px"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="https://www.instagram.com/ejohnkira/?hl=en" target="blank" style="color:#833AB4;margin-right:10px"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://twitter.com/IconicIdf" target="blank" style="color:#1DA1F2;margin-right:10px"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="https://www.linkedin.com/in/idf-iconic-b9bba8208/" target="blank" style="color:#0077b5;margin-right:10px"><i class="fab fa-linkedin-in fa-2x"></i></a>
+     
+            </div>
+        </div>
+    </div>
+    <div class="rights flex-row">
+        <h4 class="text-gray">
+            Copyright ©2021 All rights reserved | made by
+            <a href="www.icondf.com">
+                <h8>ICONIC DREAM FOCUS PVT LTD</h8>
+            </a>
+        </h4>
+    </div>
+    <div class="move-up">
+      <span><a href="#hero" ><i class="fas fa-arrow-circle-up fa-3x"></i></a></span>
+    </div>
+</footer>
+  
 </section>
   <!-- End Footer -->
   
   <script src="./JS/all.js"></script>
   <script src="./JS/main.js"></script>
   <script src="./JS/Jquery3.5.1.min.js"></script>
-  
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script>
+$(()=>{
 
+$(".btn-2").click(()=>{
+  
+ $.ajax({
+    type: "post",
+    url: "include/sendemail.php",
+    data: {
+       email:$(".email").val(),
+       subscribe:true
+    },
+    success: function(response) {
+      swal("Thanks for joining us. You'll receive latest updates from us.").then(()=>{
+        window.location.reload();
+      })
+    }
+});
+})
+  
+ 
+})
+</script>
 </body>
 </html>
