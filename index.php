@@ -14,7 +14,8 @@
    <link rel = "icon" href = "./assets/idf2.PNG" 
         type = "image/x-icon"> 
 </head>
-<body>
+<body onload="load()">
+<div id="loading"></div>
   <!-- Header -->
   <section id="header">
     <div class="header container">
@@ -255,7 +256,7 @@
         <div class="Gallery">
             <h2>Gallery</h2>
             <div class="flex-row">
-                <img src="./assets/a.jpg" alt="g1">
+                <img src="./assets/a.jpeg" alt="g1">
                 <img src="./assets/d.jpeg" alt="g2">
                 <img src="./assets/e.jpeg" alt="g3">
             </div>
@@ -301,6 +302,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 <script>
+
 $(()=>{
 
 $(".btn-2").click(()=>{
@@ -322,6 +324,14 @@ $(".btn-2").click(()=>{
   
  
 })
+function load(){
+setTimeout(()=>{
+$("#loading").hide();
+$("section").css("display","block");
+},5600);
+
+
+}
 </script>
 </body>
 </html>
