@@ -138,6 +138,11 @@
                 <h3 class="user-name">U Lavanya</h3>
                 <h5>Trainee</h5>
               </div>
+              <div class="profile" data-aos="flip-right" data-aos-delay="1000">
+                <img src="./assets/wilson.jpg" class="profile-img">
+                <h3 class="user-name">Wilson</h3>
+                <h5>Trainee</h5>
+              </div>
               
             </div>
           </div>
