@@ -19,7 +19,23 @@ use GuzzleHttp\Exception\RequestException;
    if(isset($_POST['subscribe'])){ 
          $subject = "ICONIC DREAM FOCUS PVT LTD - Thanks for subscribing us";
          $message = "Thank You for joining your hands with us. You'll always receive updates from us. And we won't share and sell your information.";
-        $body = '{"personalizations":[{"to":[{"email":"'.$_POST['email'].'","name":"ICONIC DREAM FOCUS"}],"subject":"'.$subject.'"}],"content": [{"type": "text/plain", "value":"'.$message.'"}],"from":{"email":"idficonic@gmail.com","name":"Iconic Dream Focus"}}';
+    $body='{
+   "from":{
+      "email":"idficonic@gmail.com",
+      "name":"ICONIC DREAM FOCUS PVT LTD"
+   },
+   "personalizations":[
+      {
+         "to":[
+            {
+               "email":"srseetharam1999@gmail.com"
+            }
+         ]}
+   ],
+   "template_id":"d-663d0303c1ce47f6b65e8cc576638028"
+}';
+    
+    #$body = '{"personalizations":[{"to":[{"email":"'.$_POST['email'].'","name":"ICONIC DREAM FOCUS"}],"subject":"'.$subject.'"}],"content": [{"type": "text/plain", "value":"'.$message.'"}],"from":{"email":"idficonic@gmail.com","name":"Iconic Dream Focus"}}';
   $bodyadmin = '{"personalizations":[{"to":[{"email":"srseetharam1999@gmail.com","name":"ICONIC DREAM FOCUS"}],"subject":"subscriber list "}],"content": [{"type": "text/plain", "value":"mail:'.$_POST['email'].'"}],"from":{"email":"idficonic@gmail.com","name":"Iconic Dream Focus"}}';
          
         $request = new Request('POST', 'https://api.sendgrid.com/v3/mail/send', $headers, $body);
