@@ -1,0 +1,334 @@
+@import url(../CSS/);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',
+    sans-serif;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  padding: 1rem 1rem 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*========== VARIABLES CSS ==========*/
+:root {
+  --header-height: 2.5rem;
+
+  /*========== Font and typography ==========*/
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: .938rem;
+  --small-font-size: .75rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*========== BASE ==========*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+h3 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*========== HEADER ==========*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
+  padding: 0 1rem;
+  z-index: var(--z-fixed);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  justify-content: space-around;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.header__container a {
+  color: #00ccff;
+}
+
+.header__container a:hover {
+  color: gold;
+}
+
+@media screen and (max-width: 320px) {
+  .header__search {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 1rem 3rem 0 6rem;
+  }
+
+  .header {
+    padding: 0 3rem 0 6rem;
+  }
+
+  .header__container {
+    height: calc(var(--header-height) + .5rem);
+  }
+
+  .header__search {
+    width: 300px;
+    padding: .55rem .75rem;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__logo {
+    display: block;
+  }
+
+  .header__img {
+    width: 40px;
+    height: 40px;
+    order: 1;
+  }
+
+}
+
+.section-team {
+  font-family: "Poppins", sans-serif;
+  padding: 80px 0;
+}
+
+.section-team .header-section {
+  margin-bottom: 50px;
+}
+
+.section-team .header-section .small-title {
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3e64ff;
+}
+
+.section-team .header-section .title {
+  font-weight: 700;
+  font-size: 45px;
+}
+
+.section-team .single-person {
+  margin-top: 30px;
+  padding: 30px;
+  background-color: #f6f9ff;
+  border-radius: 5px;
+}
+
+.section-team .single-person:hover {
+  background: linear-gradient(to right, #016cec, #00b5f7);
+}
+
+.section-team .single-person .person-image {
+  position: relative;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  border: 4px dashed transparent;
+  transition: padding .3s;
+}
+
+.section-team .single-person:hover .person-image {
+  padding: 12px;
+  border: 4px dashed #fff;
+}
+
+.section-team .single-person .person-image img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.section-team .single-person .person-image .icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: linear-gradient(to right, #016cec, #00b5f7);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 24px;
+}
+
+.section-team .single-person:hover .person-image .icon {
+  background: none;
+  background-color: #fff;
+  color: #016cec;
+}
+
+#section-team .single-person .person-info .full-name {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.section-team .single-person .person-info .speciality {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #016cec;
+}
+
+.section-team .single-person:hover .full-name,
+.section-team .single-person:hover .speciality {
+  color: #fff;
+}
+
+
+
+
+footer {
+  position: absolute;
+  
+  left: 0;
+  right: 0;
+  background: #111;
+  height: auto;
+  width: 100vw;
+  font-family: "Open Sans";
+  padding-top: 20px;
+  color: #fff;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: gold;
+  font-size: medium;
+}
+
+.footer-content p {
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0;
+}
+
+.socials li {
+  margin: 0 10px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.socials a i {
+  font-size: 1.1rem;
+  transition: color .4s ease;
+
+}
+
+.socials a:hover i {
+  color: aqua;
+}
+
+.footer-bottom {
+  background: #000;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-bottom span {
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 200;
+}
+
+@media (max-width: 480px) {
+    
+  .header__logo{
+      display: none;
+  }}
