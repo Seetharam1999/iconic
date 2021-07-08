@@ -6,6 +6,15 @@
 	box-sizing: border-box;
 }
 
+#loading{
+width:100%;
+height:100%;
+background:#ffff url("../assets/iconic\ dream\ focus\ pvt\ ltd.gif") no-repeat center;
+position:fixed;
+
+}
+section{
+display:none}
 html {
 	font-size: 10px;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
