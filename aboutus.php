@@ -13,6 +13,41 @@
 <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+.cards-{
+
+
+
+    margin-top: 5%;
+
+    margin-bottom: 5%;
+
+    padding-bottom: 2%;
+
+
+
+}
+
+.card{
+
+    height: 90%;
+
+    box-shadow: 6px 10px 24px -5px rgba(0,0,0,0.81);
+
+-webkit-box-shadow: 6px 10px 24px -5px rgba(0,0,0,0.81);
+
+-moz-box-shadow: 6px 10px 24px -5px rgba(0,0,0,0.81);
+
+}
+
+.card-body{
+
+    margin-bottom: 2rem !important;
+
+    text-align: center;
+
+}
+</style>
 
 </head>
 <body>
@@ -89,7 +124,7 @@
           </div>
 <div class="col-lg-8 col-md-8">
   <div class = "about-right">
-    <h1 data-aos="flip-left"data-aos-delay="1000" class="welcome">Hello<span>!</span></h1>
+    <h1 data-aos="flip-left"data-aos-delay="1000" id="welcome">Hello </h1>
     <h2 data-aos="zoom-in" data-aos-delay="1200">Here's who we are & what we do</h2>
     <div class = "about-btns">
       <a href="team.php" data-aos="fade-left" data-aos-delay="1300"><button type = "button" class = "btn btn-pink">Our Team</button></a>
@@ -146,6 +181,104 @@
 <script src="./JS/aos.js"></script>
 <script src="./JS/all.js"></script>
 <script src="./JS/about.js"></script>
-</body>
 
+
+<script>
+
+var words = ['Vanakkam !','Hello !','Bonjour !','Hallo !','Ciao !','Hola !'],
+
+    part,
+
+        i = 0,
+
+	    offset = 0,
+
+	        len = words.length,
+
+		    forwards = true,
+
+		        skip_count = 0,
+
+			    skip_delay = 20,
+
+			        speed = 70;
+
+
+
+  setInterval(function () {
+
+	      if (forwards) {
+
+		            if (offset >= words[i].length) {
+
+				            ++skip_count;
+
+					            if (skip_count == skip_delay) {
+
+							              forwards = false;
+
+								                skip_count = 0;
+
+								              }
+
+					          }
+
+			        }
+
+	          else {
+
+			        if (offset == 0) {
+
+					        forwards = true;
+
+						        i++;
+
+						        offset = 0;
+
+							        if (i >= len) {
+
+									          i = 0;
+
+										          }
+
+							      }
+
+				    }
+
+	          part = words[i].substr(0, offset);
+
+	          if (skip_count == 0) {
+
+			        if (forwards) {
+
+					        offset++;
+
+						      }
+
+				      else {
+
+					              offset--;
+
+						            }
+
+				    }
+
+		  document.getElementById("welcome").innerHTML = part;
+
+  },speed);
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
 </html>
