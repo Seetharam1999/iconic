@@ -202,7 +202,23 @@ img {
 
 
 
+.cards-{
 
+    margin: 5%;
+    margin-bottom: 10%;
+    padding-bottom: 2%;
+
+}
+.card{
+    height: 90%;
+    box-shadow: 6px 10px 24px -5px rgba(0,0,0,0.81);
+-webkit-box-shadow: 6px 10px 24px -5px rgba(0,0,0,0.81);
+-moz-box-shadow: 6px 10px 24px -5px rgba(0,0,0,0.81);
+}
+.card-body{
+    margin-bottom: 2rem !important;
+    text-align: center;
+}
 .about-right {
     background: #fff;
     

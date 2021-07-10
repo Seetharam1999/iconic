@@ -171,7 +171,6 @@ Website is like a Visiting Card. We provide a unique identity of your dish.  </p
 <footer>
         <div class="footer-content">
             <h3>ICONIC DREAM FOCUS</h3>
-            <h4>"Our Future Source is to cook Iconic Products to connect the World"</h4>
             <ul class="socials">
                 <li><a href="http://facebook.com/IDFiconic" style="color:rgb(49, 55, 146)"><i class="fab fa-facebook-f fa-lg"></i></a></li>
                 <li><a href="https://www.instagram.com/ejohnkira/?hl=en" style="color:#833AB4"><i class="fab fa-instagram fa-lg"></i></a></li>

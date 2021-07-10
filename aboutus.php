@@ -13,13 +13,7 @@
 <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<style>
 
-.cards-{
-
-margin: 10%;
-margin-bottom: 10%;}
-</style>
 </head>
 <body>
      <!--========== HEADER ==========-->
@@ -39,7 +33,7 @@ margin-bottom: 10%;}
         <div class="row cards-">
   <div class="col-lg-4 col-md-4 col-12">
 
-    <div class="card" style="border: none;" data-aos="flip-right" data-aos-delay="1000">
+    <div class="card" style="border: none;" data-aos="flip-right" data-aos-delay="1200">
       <img src="./assets/MISSION.png" class="card-img-top" alt="Mission">
       <div class="card-body">
         <h2 class="card-text">Future source</h2>
@@ -48,7 +42,7 @@ margin-bottom: 10%;}
     </div>
   </div>
   <div class="col-lg-4 col-md-4 col-12">
-    <div class="card" style="border: none;" data-aos="flip-right" data-aos-delay="1100">
+    <div class="card" style="border: none;" data-aos="flip-right" data-aos-delay="1200">
       <img src="./assets/vission.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h2 class="card-text">To cook <span>iconic</span> products to connect the world</h2>
@@ -137,7 +131,6 @@ margin-bottom: 10%;}
     <footer>
         <div class="footer-content">
             <h3>ICONIC DREAM FOCUS</h3>
-            <h4>"Our Future Source is to cook Iconic Products to connect the World"</h4>
             <ul class="socials">
                 <li><a href="http://facebook.com/IDFiconic" style="color:rgb(49, 55, 146)"><i class="fab fa-facebook-f fa-lg"></i></a></li>
                 <li><a href="https://www.instagram.com/ejohnkira/?hl=en" style="color:#833AB4"><i class="fab fa-instagram fa-lg"></i></a></li>
@@ -154,133 +147,5 @@ margin-bottom: 10%;}
 <script src="./JS/all.js"></script>
 <script src="./JS/about.js"></script>
 </body>
-<!-- <script>
-  var app = document.getElementById('cursor');
-var typewriter = new Typewriter(app, {
-    loop: true
-});
 
-typewriter.typeString('Hello')
-    .pauseFor(2500)
-    .deleteAll()
-    .typeString('Bonjur')
-    .pauseFor(2500)
-    .deleteChars(7)
-    .typeString('Vanakkam')
-    .pauseFor(2500)
-    .start();
-
-</script> -->
-<!-- <script type="text/javascript">
-// values to keep track of the number of letters typed, which quote to use. etc. Don't change these values.
-var i = 0,
-    a = 0,
-    isBackspacing = false,
-    isParagraph = false;
-
-// Typerwrite text content. Use a pipe to indicate the start of the second line "|".  
-var textArray = [
-  "Hello","Bonjur","namaste","Vanakkam"
-];
-
-// Speed (in milliseconds) of typing.
-var speedForward = 100, //Typing Speed
-    speedWait = 2000, // Wait between typing and backspacing
-    speedBetweenLines = 2000, //Wait between first and second lines
-    speedBackspace = 25; //Backspace Speed
-
-//Run the loop
-typeWriter("output", textArray);
-
-function typeWriter(id, ar) {
-  var element = $("#" + id),
-      aString = ar[a],
-      eHeader = element.children("h1"), //Header element
-      eParagraph = element.children("p");
-  // Determine if animation should be typing or backspacing
-  if (!isBackspacing) {
- 
-    if (i < aString.length) {
-      
-     
-      if (aString.charAt(i) == "|") {
-      
-        eHeader.removeClass("cursor");
-      
-        i++;
-        setTimeout(function(){ typeWriter(id, ar); }, speedBetweenLines);
-        
-   
-      } else {
-  
-        if (!isParagraph) {
-          eHeader.text(eHeader.text() + aString.charAt(i));
-        } 
-        i++;
-        setTimeout(function(){ typeWriter(id, ar); }, speedForward);
-      }
-      
-   
-    } else if (i == aString.length) {
-      
-      isBackspacing = true;
-      setTimeout(function(){ typeWriter(id, ar); }, speedWait);
-      
-    }
-    
-  
-  } else {
-    
-  if (eHeader.text().length > 0 ) {
-      
-   
-     if (eHeader.text().length > 0) {
-       
-        eHeader.addClass("cursor");
-        eHeader.text(eHeader.text().substring(0, eHeader.text().length - 1));
-      }
-      setTimeout(function(){ typeWriter(id, ar); }, speedBackspace);
-    
-  
-    } else { 
-      
-      isBackspacing = false;
-      i = 0;
-      isParagraph = false;
-      a = (a + 1) % ar.length; 
-      setTimeout(function(){ typeWriter(id, ar); }, 50);
-      
-    }
-  }
-}</script>
-<style>
-  .cursor::after {
-    content:'';
-    display:inline-block;
-    margin-left:3px;
-    background-color:white;
-    animation-name:blink;
-    animation-duration:0.5s;
-    animation-iteration-count: infinite;
-  }
-  h1.cursor::after {
-    height:24px;
-    width:13px;
-  }
-  
-  @keyframes blink {
-    0% {
-      opacity:1;
-    }
-    49% {
-      opacity:1;
-    }
-    50% {
-      opacity:0;
-    }
-    100% {
-      opacity:0;
-    }
-  }
-</style> -->
 </html>
