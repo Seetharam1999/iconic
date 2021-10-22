@@ -40,9 +40,13 @@
 
           <div class="info">
             <div class="information" data-aos="zoom-out" data-aos-delay="1200">
-              <img src="./assets/location.png" class="icon" alt=""/>
+	      <img src="./assets/location.png" class="icon" alt=""/>
+<div style="display:flex,flex-direction:row"><i style="color:grey">Main Address</i></br>
               <p>New no. 28, Old no. 1005, Krishna Villa, 21st Main Road, Anna Nagar, Chennai</p>
-            </div>
+<i style="color:grey"> Communication Address
+</i>	   
+<p> New No.1884, Old No.5,4th Street,Vasantham Colony,18th Main Road,Anna Nagar,Chennai-40</p>
+</div> </div>
             <div class="information">
               <img src="./assets/email.png" class="icon" alt=""/>
               <p>icondf@gmail.com</p>

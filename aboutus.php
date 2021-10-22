@@ -18,10 +18,9 @@
 
 
 
-    margin-top: 5%;
+    margin-top: 15%;
 
-    margin-bottom: 5%;
-
+    margin-bottom: 20%;
     padding-bottom: 2%;
 
 
@@ -30,7 +29,8 @@
 
 .card{
 
-    height: 90%;
+   width:16rem;
+height:20rem;
 
     box-shadow: 6px 10px 24px -5px rgba(0,0,0,0.81);
 
@@ -66,31 +66,31 @@
       <!----------------header------------>
       <div class="container">
         <div class="row cards-">
-  <div class="col-lg-4 col-md-4 col-12">
+  <div class="col-lg-4 col-md-6 col-12">
 
     <div class="card" style="border: none;" data-aos="flip-right" data-aos-delay="1200">
       <img src="./assets/MISSION.png" class="card-img-top" alt="Mission">
       <div class="card-body">
-        <h2 class="card-text">Future source</h2>
+        <h4 class="card-text">Future source</h4>
         
       </div>
     </div>
   </div>
-  <div class="col-lg-4 col-md-4 col-12">
+  <div class="col-lg-4 col-md-6 col-12">
     <div class="card" style="border: none;" data-aos="flip-right" data-aos-delay="1200">
       <img src="./assets/vission.png" class="card-img-top" alt="...">
       <div class="card-body">
-        <h2 class="card-text">To cook <span>iconic</span> products to connect the world</h2>
+        <h4 class="card-text">To cook <span>iconic</span> products to connect the world</h4>
         
       </div>
     </div>
   </div>
 
-  <div class="col-lg-4 col-md-4 col-12">
+  <div class="col-lg-4 col-md-6 col-12">
     <div class="card" style="border: none;" data-aos="flip-right" data-aos-delay="1200">
       <img src="./assets/values.png" class="card-img-top" alt="...">
       <div class="card-body">
-        <h2 class="card-text">To Connect world and people</h2>
+        <h4 class="card-text">To Connect world and people</h4>
         
       </div>
     </div>
